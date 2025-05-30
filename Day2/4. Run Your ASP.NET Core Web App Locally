@@ -1,0 +1,53 @@
+🚀 Exercise – Run Your ASP.NET Core Web App Locally
+
+🔧 What You'll Do
+
+In this exercise, you will:
+Start your ASP.NET Core web application locally.
+Open it in a browser to see the output.
+Understand how the application is hosted and responds to requests.
+
+▶️ Running the Web App Locally
+
+To launch your app, follow these steps using the .NET CLI:
+Open a terminal or command prompt.
+Navigate to the folder containing your MyWebApp.csproj file.
+Run the following command to build and launch your project:
+dotnet run
+
+Once executed, you'll see console output similar to this:
+
+C:\MyWebApp> dotnet run
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+        Now listening on: http://localhost:5267
+info: Microsoft.Hosting.Lifetime[0]
+        Application started. Press Ctrl+C to shut down.
+
+📌 Note: The port number (5267 in this example) may vary, as it’s randomly assigned when the project is created.
+
+Now, open your browser and go to the URL shown in the output (e.g., http://localhost:5267).
+You should see “Hello World!” displayed on the page.
+To stop the app, press Ctrl+C in your terminal.
+
+🧠 Understanding How ASP.NET Core Serves the App
+When you run the app, here’s what happens behind the scenes:
+
+⚙️ 1. Build and Configuration
+The project is compiled using MSBuild, which reads from the .csproj file.
+Any necessary dependencies are restored.
+The app loads its configuration (like launchSettings.json) to determine launch settings such as the default URL.
+
+🌐 2. Host Initialization
+WebApplication.CreateBuilder() sets up a hosting environment.
+By default, the Kestrel web server is used — a fast, cross-platform server built for ASP.NET Core.
+Kestrel listens for HTTP (and optionally HTTPS) requests on the configured ports.
+
+🔁 3. Handling Requests
+Kestrel forwards incoming requests to the ASP.NET Core middleware pipeline.
+Middleware components process the request (e.g., authentication, logging, routing).
+When a route matches (/ in our case), the assigned handler (() => "Hello World!") generates the response.
+
+📤 4. Sending the Response
+The response text — "Hello World!" — is sent back through the pipeline to Kestrel.
+Kestrel then delivers it to the client’s browser.

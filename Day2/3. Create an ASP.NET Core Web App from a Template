@@ -1,0 +1,56 @@
+✅ Exercise Completed: Create an ASP.NET Core Web App from a Template
+
+🎯 Goal
+Set up a new ASP.NET Core web app using the .NET CLI, understand its structure, and run it locally to observe minimal API behavior.
+
+🛠️ Tools Used
+.NET SDK (latest version)
+Visual Studio Code with C# Dev Kit Extension
+Command-Line Interface (dotnet CLI)
+
+🧪 Step-by-Step Execution
+1. Create the project
+
+dotnet new web -o MyWebApp
+
+web: ASP.NET Core Empty Web App template — no MVC, Razor Pages, or static files by default.
+
+-o MyWebApp: Creates and names the output folder and project.
+
+2. Project Structure Overview
+
+File/Folder	                 Description
+MyWebApp.csproj	                Project file defining target framework, dependencies, and build settings.
+Program.cs                    	Entry point using Minimal API pattern.
+Properties/launchSettings.json	Defines dev-time settings like ports and environment (Development).
+obj/	                          Temporary build files (intermediate).
+bin/	                          Final build output (created after dotnet build).
+
+🔍 Minimal API Breakdown in Program.cs
+
+var builder = WebApplication.CreateBuilder(args); // Host + DI + Config
+var app = builder.Build();
+
+app.MapGet("/", () => "Hello World!"); // Root endpoint with lambda
+
+app.Run(); // Starts listening for requests
+MapGet("/", ...) handles GET requests at the root path.
+
+Supports rapid API development without MVC overhead.
+Great for microservices and lightweight apps.
+
+🌐 Running the Application
+
+dotnet run
+
+Launches the app on the configured URLs (see launchSettings.json).
+
+Default dev URL examples:
+http://localhost:5218
+https://localhost:7140
+
+💡 Key Concepts Reinforced
+ASP.NET Core’s Minimal Hosting Model.
+Importance of launch profiles for dev/test environments.
+How templates bootstrap real-world apps fast.
+Project extensibility: Add MVC, Razor Pages, EF Core, Swagger, and more as needed.

@@ -1,0 +1,60 @@
+🔁 Exercise – Make Live Code Changes with dotnet watch
+
+🛠 What You’ll Learn
+
+In this section, you’ll boost your development speed by:
+Running your ASP.NET Core web app using the dotnet watch tool.
+Making and instantly seeing live code changes in the browser.
+Understanding how Hot Reload works behind the scenes.
+
+▶️ Start Your App with dotnet watch
+Instead of restarting your app manually every time you change a file, you can run it with:
+dotnet watch
+
+This command builds and launches the app, and continuously monitors for file changes.
+
+📄 Example Output:
+Now listening on: http://localhost:5287
+
+🔍 Note: The port number (e.g., 5287) is randomly assigned by the system when the project is first generated. Use the port shown in your terminal output.
+
+You can now open your app in a web browser (e.g., http://localhost:5287) and see the default message:
+"Hello World!"
+
+✍️ Edit Code and See Instant Results
+
+Let’s make a change and observe how it’s reflected in the app in real-time:
+While the app is still running, open the Program.cs file.
+
+Modify the code from:
+app.MapGet("/", () => "Hello Surendra!");
+
+To:
+app.MapGet("/", () => "Hello Surendra, Are you .NET Developer?");
+
+Save the file.
+
+Now observe what happens:
+
+✅ Hot Reload Activated:
+
+dotnet watch detects the change.
+
+If eligible, it applies the update to the running application without restarting it.
+
+🔄 If Needed:
+
+If Hot Reload isn’t possible (for example, after structural changes), dotnet watch will:
+Automatically rebuild the application.
+Restart the app and re-apply changes.
+You’ll see confirmation in the terminal indicating that the Program.cs file was modified.
+
+Refresh your browser – the page now displays:
+"Hello Surendra, Are you .NET Developer?"
+
+⚡ Why This Matters
+
+Using dotnet watch supercharges your development workflow by:
+Removing the need to manually rebuild after every change.
+Displaying your updates in real time.
+Allowing faster iteration and more productive debugging.

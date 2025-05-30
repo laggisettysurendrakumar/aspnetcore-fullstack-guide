@@ -1,0 +1,31 @@
+🌐 Introduction to ASP.NET Core Web App Development
+
+🔰 Getting Started
+In this module, you’ll create your first ASP.NET Core web application using .NET and C#, gaining a solid understanding of the default project structure and the development workflow.
+
+📌 Scenario
+You're beginning your journey with ASP.NET Core and want to learn how to:
+Quickly scaffold a basic web application,
+Understand the structure of the project,
+Run and view the app in a browser on your local machine, and
+Begin making meaningful code changes during development.
+
+🚀 What You'll Do
+By the end of this module, you will have:
+Reviewed the default project templates included with the .NET SDK.
+Created a new ASP.NET Core project from a template.
+Examined the project structure to understand how everything is organized.
+Ran your web app locally and viewed it in your browser.
+Explored how ASP.NET Core serves the application using its built-in web server.
+Modified and tested code live during development.
+
+You'll also receive resources for exploring more advanced ASP.NET Core topics to deepen your learning.
+
+🛠️ Tools You'll Need
+To follow along with this module, ensure you have the following:
+
+✅ .NET SDK (latest version)
+Download from https://dotnet.microsoft.com
+✅ Visual Studio Code
+With the C# Dev Kit extension installed
+Download VS Code
